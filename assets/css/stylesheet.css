@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+}
+
+/*setting the container to relative to both grids can be placed on top of each other*/
+.grid-container {
+  position: relative;
+}
+
+/*image-grid setup*/
+.image-container {
+  position: absolute;
+  margin-left: 10px;
+  display: grid;
+  grid-template-rows: 8vh 43vh 43vh;
+  grid-auto-columns: 24vw;
+}
+
+/*img formatting beggining*/
+#scott img,
+#ramona img,
+#wallace img,
+#kim img,
+#steven img,
+#neil img,
+#envy img,
+#knives img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+/*img formatting end*/
+
+/*img posiitoning beginning*/
+#scott {
+  grid-area: sp;
+  grid-column: 1;
+  grid-row: 2;
+}
+#ramona {
+  grid-area: rf;
+  grid-column: 2;
+  grid-row: 2;
+}
+#wallace {
+  grid-area: ww;
+  grid-column: 3;
+  grid-row: 2;
+}
+#kim {
+  grid-area: kp;
+  grid-column: 4;
+  grid-row: 2;
+}
+#steven {
+  grid-area: ss;
+  grid-column: 1;
+  grid-row: 3;
+}
+#neil {
+  grid-area: yn;
+  grid-column: 2;
+  grid-row: 3;
+}
+#envy {
+  grid-area: ea;
+  grid-column: 3;
+  grid-row: 3;
+}
+#knives {
+  grid-area: kc;
+  grid-column: 4;
+  grid-row: 3;
+}
+#title {
+  font-family: "Righteous", cursive;
+  color: white;
+  text-align: center;
+  grid-area: h;
+  font-size: 20px;
+  grid-column: 1 / span 4;
+  grid-row: 1;
+  margin-top: 10px;
+}
+/*img posiitoning end*/
+
+/*images dissapear on hover*/
+.image-container img:hover {
+  opacity: 0%;
+  transition-duration: 0.5s;
+}
+
+/*text-grid setup*/
+.text-container {
+  position: absolute;
+  margin-left: 10px;
+  display: grid;
+  grid-template-rows: 8vh 43vh 43vh;
+  grid-auto-columns: 24vw;
+}
+
+/*text positioning beginning*/
+#spt {
+  grid-area: spt;
+  grid-column: 1;
+  grid-row: 2;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  padding-left: 30px;
+}
+#rft {
+  grid-area: rft;
+  grid-column: 2;
+  grid-row: 2;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  padding-left: 30px;
+}
+#wwt {
+  grid-area: wwt;
+  grid-column: 3;
+  grid-row: 2;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  padding-left: 30px;
+}
+#kpt {
+  grid-area: kpt;
+  grid-column: 4;
+  grid-row: 2;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  padding-left: 30px;
+}
+#sst {
+  grid-area: sst;
+  grid-column: 1;
+  grid-row: 3;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  padding-left: 30px;
+}
+#ynt {
+  grid-area: spt;
+  grid-column: 2;
+  grid-row: 3;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  padding-left: 30px;
+}
+#eat {
+  grid-area: spt;
+  grid-column: 3;
+  grid-row: 3;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  padding-left: 30px;
+}
+#kct {
+  grid-area: spt;
+  grid-column: 4;
+  grid-row: 3;
+  color: white;
+  text-align: center;
+  padding: 6px;
+  padding-left: 30px;
+}
+/*text positioning end*/
+
+@media screen and (max-width: 800px) {
+  .image-container {
+    grid-template-areas:
+      "h"
+      "sp"
+      "rf"
+      "ww"
+      "kp"
+      "ss"
+      "yn"
+      "ea"
+      "kc";
+  }
+  .image-container {
+    grid-template-areas:
+      "h"
+      "spt"
+      "rft"
+      "wwt"
+      "kpt"
+      "sst"
+      "ynt"
+      "eat"
+      "kct";
+  }
+
+  #title {
+    grid-row: 1;
+  }
+  #sp {
+    grid-row: 2;
+  }
+  #rf {
+    grid-row: 3;
+  }
+  #ww {
+    grid-row: 4;
+  }
+  #kp {
+    grid-row: 5;
+  }
+  #ss {
+    grid-row: 6;
+  }
+  #yn {
+    grid-row: 7;
+  }
+  #ea {
+    grid-row: 8;
+  }
+  #kc {
+    grid-row: 9;
+  }
+}
